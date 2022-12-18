@@ -73,3 +73,10 @@ button:hover {
   justify-content: space-around;
   align-items: center;
 }
+
+.btn_green:hover { 
+  color: #2ed573;
+}
+.btn_red:hover {
+    color: #ff4757;
+  }
