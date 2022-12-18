@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import AddTwoToneIcon from "@mui/icons-material/AddTwoTone";
 import RemoveIcon from "@mui/icons-material/Remove";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 
 const TodoList = () => {
   const [num, setNum] = useState(0);
@@ -23,12 +25,16 @@ const TodoList = () => {
         <div className="center_div">
           <h1>{num}</h1>
           <div className="btn_div">
-            <button onClick={incNum}>
-              <AddTwoToneIcon />
-            </button>
-            <button onClick={decNum}>
-              <RemoveIcon />
-            </button>
+            <Tooltip title="Increment">
+              <Button onClick={incNum} className="btn_green">
+                <AddTwoToneIcon />
+              </Button>
+            </Tooltip>
+            <Tooltip title="Decrement">
+              <Button onClick={decNum} className="btn_red">
+                <RemoveIcon />
+              </Button>
+            </Tooltip>
           </div>
         </div>
       </div>
